@@ -1,16 +1,13 @@
 # VIDB視障保齡球
 
-視障保齡球 VIDB:Visual-impaired disabilities bowling
+視障保齡球 VIDB: Visual-impaired disabilities bowling，一個提供視障者友善介面，此專案使用Flutter框架開發的行動裝置平台。
 
-## Getting Started
+## Installation
+要在本地端運行，請按照以下步驟操作:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Make sure you have **Flutter SDK** installed.
+2. Clone this repository: `[git clone https://github.com/username/my-flutter-app.git](https://github.com/niaotaojiao/VIDB.git)`.
+3. Change directory to the app folder: `cd VIDB`.
+4. Run `flutter pub get` to install dependencies.
+5. Connect your mobile device or emulator.
+6. Run `flutter run` to start the app.
