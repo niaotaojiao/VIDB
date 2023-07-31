@@ -13,7 +13,7 @@
 6. Run `flutter run` to start the app.
 
 ## Speaking rate
-如果你覺得語速太快或太慢，在`text_to_speech.dart`更改以下程式碼數值:
+如果你覺得語速太快或太慢，在`text_to_speech.dart`更改以下程式碼數值(0.0~1.0):
 ```cpp=13
 tts.setSpeechRate(0.4);
 ```
