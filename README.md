@@ -15,10 +15,10 @@
 ## Speaking rate
 如果你覺得語速太快或太慢，在`text_to_speech.dart`更改以下程式碼數值(0.0~1.0):
 ```cpp=13
-tts.setSpeechRate(0.4);
+tts.setSpeechRate(0.7);
 ```
 
 ## 🧾To-Do List
-- [ ] 1. Create database (Firebase)
-- [ ] 2. Read data
-- [ ] 3. APP design
+- [x] 1. Create database (Firebase)
+- [x] 2. Read data
+- [x] 3. APP design
