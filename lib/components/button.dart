@@ -11,37 +11,34 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child:  Semantics(
-        label: name,
-        child: ElevatedButton(
-          onPressed: () {
-            toSpeech(id);
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-            side: const BorderSide(
-              color: Colors.black,
-              width: 4,
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
+      child:  ElevatedButton(
+        onPressed: () {
+          toSpeech(id);
+        },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          side: const BorderSide(
+            color: Colors.black,
+            width: 4,
           ),
-          child: Column(
-            children: [
-              const SizedBox(height: 25),
-              imgPick(id),
-              const SizedBox(height: 5),
-              Text(
-                name,
-                style: const TextStyle(
-                  fontSize: 35.0,
-                  color: Colors.black,
-                ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+        ),
+        child: Column(
+          children: [
+            const SizedBox(height: 40),
+            imgPick(id),
+            const SizedBox(height: 5),
+            Text(
+              name,
+              style: const TextStyle(
+                fontSize: 35.0,
+                color: Colors.black,
               ),
-              const SizedBox(height: 25),
-            ],
-          ),
+            ),
+            const SizedBox(height: 40),
+          ],
         ),
       )
     );
@@ -50,7 +47,7 @@ class Button extends StatelessWidget {
 
 
 Widget imgPick(int id) {
-  double size=100;
+  double size=150;
   switch(id){
     case 0:
       return Image.asset('assets/img/bowling.png',
