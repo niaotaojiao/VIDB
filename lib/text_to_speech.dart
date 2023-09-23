@@ -25,7 +25,7 @@ Future<void> setup() async {
   final FlutterTts tts = FlutterTts();
   tts.setLanguage('en');
   tts.setSpeechRate(0.6);
-  tts.speak('i Strike is now active"');
+  await tts.speak('i Strike is now active"');
 }
 
 String setPin(text) {
@@ -94,13 +94,13 @@ Future<void> toSpeech(id) async {
 
   switch(id) {
     case 1:
-      (software.length >= hardware.length) ? tts.speak(keyword[id]) : tts.speak(setPin(hardware));
+      (software.length >= hardware.length) ? await tts.speak(keyword[id]) : await tts.speak(setPin(hardware));
       break;
     case 2:
-      (pose[0] == '300') ? tts.speak('開發中') : tts.speak(keyword[id]);
+      (pose[0] == '300') ? await tts.speak('開發中') : tts.speak(keyword[id]);
       break;
     case 3:
-      (hand[0] == '300') ? tts.speak('開發中') : tts.speak(keyword[id]);
+      (hand[0] == '300') ? await tts.speak('開發中') : await tts.speak(keyword[id]);
       break;
     case -1:
       String allText = keyword[0] + keyword[1];
@@ -109,7 +109,7 @@ Future<void> toSpeech(id) async {
       tts.speak(allText);
       break;
     default:
-      tts.speak(keyword[id]);
+      await tts.speak(keyword[id]);
       break;
   }
 }

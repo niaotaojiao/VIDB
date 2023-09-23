@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final Stream<QuerySnapshot> documentStream = FirebaseFirestore.instance
       .collection("iStrike").snapshots();
-
+  bool isFirstTime = true;
   @override
   Widget build(BuildContext context) {
     setup();
@@ -77,7 +77,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return const Text("Loading");
                     }
-                    toSpeech(-1);
+                    if (isFirstTime) {
+                      isFirstTime = false;
+                    } else {
+                      toSpeech(-1);
+                    }
                     return Container();
                   },
                 )
